@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView helloText;
     Button helloButton;
     ImageView helloPuppy;
+    boolean clicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +45,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onHelloClick(View view){
-        helloPuppy = (ImageView)findViewById(R.id.hello_image);
+        if(clicked == false){
+            helloPuppy = (ImageView)findViewById(R.id.hello_image);
+            helloPuppy.setVisibility(View.VISIBLE);
+            clicked = true;
+        }
+        else{
+            helloPuppy.setVisibility(View.INVISIBLE);
+            clicked = false;
+        }
+
 
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

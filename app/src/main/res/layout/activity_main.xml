@@ -63,6 +63,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/hello_world_puppy"
-        android:id = "@+id/hello_image" />
+        android:id = "@+id/hello_image"
+        android:visibility="invisible"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
