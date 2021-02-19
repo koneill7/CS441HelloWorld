@@ -14,11 +14,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView helloText;
     Button helloButton;
+    ImageView helloPuppy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
         helloText = (TextView) findViewById(R.id.hello_text);
         helloButton = (Button) findViewById(R.id.hello_button);
 
-        public void onHelloClick(View view){
-            helloText.setTextSize(64);
-        }
+
+    }
+    public void onHelloClick(View view){
+        helloPuppy = (ImageView)findViewById(R.id.hello_image);
+
     }
 
 
