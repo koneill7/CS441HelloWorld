@@ -18,9 +18,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView helloText;
+    TextView fullGrown;
     Button helloButton;
     ImageView helloPuppy;
+    ImageView helloDog;
+    Button feedPuppy;
     boolean clicked = false;
 
     @Override
@@ -39,23 +41,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        helloText = (TextView) findViewById(R.id.hello_text);
         helloButton = (Button) findViewById(R.id.hello_button);
-
+        feedPuppy = (Button) findViewById(R.id.feed_puppy);
+        helloPuppy = (ImageView)findViewById(R.id.hello_image);
+        helloDog = (ImageView)findViewById(R.id.dog_image);
+        fullGrown = (TextView) findViewById(R.id.full_grown);
 
     }
     public void onHelloClick(View view){
         if(clicked == false){
-            helloPuppy = (ImageView)findViewById(R.id.hello_image);
             helloPuppy.setVisibility(View.VISIBLE);
             clicked = true;
         }
-        else{
-            helloPuppy.setVisibility(View.INVISIBLE);
-            clicked = false;
-        }
+        feedPuppy.setVisibility(View.VISIBLE);
 
 
+    }
+    public void onFeedClick(View view){
+
+            if(helloPuppy.getLayoutParams().height >= 500){
+                helloDog.setVisibility(View.VISIBLE);
+                helloPuppy.setVisibility(View.INVISIBLE);
+                fullGrown.setVisibility(View.VISIBLE);
+            }
+            else{
+                helloPuppy.getLayoutParams().height = helloPuppy.getLayoutParams().height + 50;
+                helloPuppy.getLayoutParams().width = helloPuppy.getLayoutParams().width + 50;
+                helloPuppy.requestLayout();
+
+            }
     }
 
     @Override

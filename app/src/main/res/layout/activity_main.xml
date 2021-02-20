@@ -34,7 +34,7 @@
         android:id="@+id/hello_button"
         android:layout_width="400px"
         android:layout_height="100px"
-        android:layout_marginTop="400px"
+        android:layout_marginTop="1500px"
         android:text="Hello World"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -43,9 +43,9 @@
         android:onClick="onHelloClick"/>
     <Button
         android:id = "@+id/feed_puppy"
-        android:layout_width="400px"
+        android:layout_width="600px"
         android:layout_height="100px"
-        android:layout_marginTop = "1200px"
+        android:layout_marginTop = "1600px"
         android:text="Feed the Puppy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -54,6 +54,15 @@
         android:visibility="invisible"
         android:onClick="onFeedClick"/>
 
+    <TextView
+        android:id = "@+id/full_grown"
+        android:layout_width="500px"
+        android:layout_height="250px"
+        android:layout_marginTop="1150px"
+        android:layout_marginLeft="350px"
+        android:text="The puppy is full grown!"
+        android:visibility="invisible"
+        />
     <ImageView
         android:layout_width="500px"
         android:layout_height="350px"
