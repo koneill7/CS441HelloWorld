@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 helloPuppy.getLayoutParams().height = helloPuppy.getLayoutParams().height + 50;
                 helloPuppy.getLayoutParams().width = helloPuppy.getLayoutParams().width + 50;
                 helloPuppy.requestLayout();
-
             }
     }
 
